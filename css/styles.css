@@ -13,9 +13,29 @@ body {
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.02em;
 }
+
+.header {
+  border-bottom: 1px solid #e7e9fc;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
+
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section.no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .logo {
   font-family: Raleway;
   color: var(--blue-color-button);
@@ -32,19 +52,31 @@ ul {
   color: var(--title-text-color);
 }
 
-element.style {
+. element.style {
   color: var(--accent-color);
 }
 /* Site nav */
+
+.site-nav {
+  display: flex;
+  margin-left: 76px;
+}
+.site-nav .item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .site-nav .link.current {
   color: var(--accent-color);
 }
 .site-nav .link {
+  display: block;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .site-nav .link:hover,
@@ -53,6 +85,16 @@ element.style {
 }
 
 /* auth-nav */
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .auth-nav .link-adress {
   color: var(--title-text-color);
   font-family: 'Roboto';
@@ -68,10 +110,21 @@ element.style {
   color: var(--accent-color);
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  margin-right: auto;
+}
+
 /* Hero */
 
 .hero {
   background-color: var(--title-text-color);
+  text-align: center;
 }
 
 .hero-title {
@@ -81,6 +134,8 @@ element.style {
   line-height: 1.07;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-top: 0;
+  margin-bottom: 48px;
 }
 
 .button:hover,
@@ -97,6 +152,10 @@ element.style {
   line-height: 1.5;
   letter-spacing: 0.02em;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 32px;
+  display: inline-block;
+  min-width: 169px;
 }
 
 /* Sections header*/
@@ -115,7 +174,19 @@ element.style {
 }
 
 /* Characteristics*/
+
+.list {
+  display: flex;
+}
+
+.list .list-item:not(:last-child) {
+  margin-right: 24px;
+}
+
 .list-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 20px;
@@ -128,11 +199,56 @@ element.style {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  letter-spacing: 0 * +0.02em;
+}
+.list .list-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.list .list-text {
+  margin-top: 0;
+  margin-bottom: 120px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* What are we doing */
+
+.container-work {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-element {
+  width: 360px;
 }
 
 /* Team */
+
+.container-team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-element-team {
+  width: 264px;
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -146,6 +262,8 @@ element.style {
   background-color: var(--white-color-with-shadow);
 }
 .team-title {
+  padding-bottom: 8px;
+
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 20px;
@@ -161,8 +279,18 @@ element.style {
   letter-spacing: 0.02em;
 }
 
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* _________FOOTER___________ */
+
 .footer {
   background-color: var(--title-text-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .footer-text {
@@ -170,10 +298,27 @@ element.style {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  width: 264px;
 }
 
 /* Portfolio */
+
+.container-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.container-list-div {
+  width: 360px;
+}
+
+.section-secondary {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+
 .button-header {
+  padding: 12px 24px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -192,6 +337,28 @@ element.style {
   color: var(--white-color);
   background-color: #404bbf;
 }
+
+/* Filtrs */
+
+.filtrs {
+  display: flex;
+  justify-content: center;
+}
+
+.filtrs .filtrs-item:not(:last-child) {
+  margin-right: 24px;
+}
+
+.container-list-div {
+  margin-bottom: 48px;
+}
+
+.div-header-paragraf {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-content: center;
+}
+
 .filtrs .button-header:active {
   color: var(--white-color);
   background: var(--accent-color);
@@ -199,4 +366,11 @@ element.style {
 
 .logo .accent-footer {
   color: var(--white-color-with-shadow);
+}
+.container-button {
+  padding-bottom: 72px;
+}
+
+.logo-footer {
+  padding-bottom: 16px;
 }
