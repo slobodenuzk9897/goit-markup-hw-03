@@ -18,8 +18,8 @@ body {
 
 .header {
   border-bottom: 1px solid #e7e9fc;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
 }
 
 ul {
@@ -41,7 +41,7 @@ h4,
 h5,
 h6,
 p {
-  margin-bottom: 0;
+  margin: 0;
 }
 
 img {
@@ -152,11 +152,11 @@ img {
 .hero {
   background-color: var(--title-text-color);
   text-align: center;
-  padding: 188px 473px;
+  padding: 188px 0;
 }
 
 .hero-title {
-  margin-top: 0;
+  margin: 0 auto;
   margin-bottom: 48px;
   text-align: center;
 
@@ -212,6 +212,10 @@ img {
   display: flex;
 }
 
+.list-item {
+  width: 264px;
+}
+
 .list .list-item:not(:last-child) {
   margin-right: 24px;
 }
@@ -259,10 +263,6 @@ img {
   gap: 24px;
 }
 
-/* .flex-element {
-  width: 360px;
-} */
-
 /* Team */
 
 .container-team {
@@ -275,17 +275,15 @@ img {
 }
 
 .container-team > .flex-el-team {
-  flex-basis: calc(100 / 4);
-}
-
-.card {
+  /* flex-basis: calc(100 / 4); */
   box-shadow: var(--card-shadow);
   border-radius: 0px 0px 4px 4px;
-  overflow: hidden;
+  background-color: var(--white-color);
 }
 
 .card-content {
   padding: 32px 16px;
+  text-align: center;
 }
 
 .team-text {
@@ -310,8 +308,6 @@ img {
   background-color: var(--white-color-with-shadow);
 }
 .team-title {
-  padding-bottom: 8px;
-
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 20px;
@@ -343,6 +339,7 @@ img {
 .filtrs {
   display: flex;
   justify-content: center;
+  margin-bottom: 72px;
 }
 
 .filtrs .filtrs-item:not(:last-child) {
@@ -362,6 +359,8 @@ img {
   cursor: pointer;
   font-family: inherit;
   background-color: var(--white-color-with-shadow);
+  border: none;
+  border-radius: 4px;
 }
 
 .filtrs .button-header:active {
@@ -378,12 +377,8 @@ img {
 /* _________________CARDS_________________ */
 
 .container-list {
-  padding: 0;
-  margin: 0;
-
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-left: -24px;
   margin-top: -48px;
 }
@@ -392,21 +387,14 @@ img {
   flex-basis: calc(100 / 3-24px);
   margin-left: 24px;
   margin-top: 48px;
-}
-
-.filtrs-li {
   box-shadow: var(--card-shadow);
-
-  overflow: hidden;
 }
 
-.container-list-div {
+/* .container-list-div {
   margin-bottom: 48px;
-}
+} */
 
 .div-header-paragraf {
-  display: flex;
-  flex-direction: column;
   padding: 32px 16px;
 }
 
@@ -435,5 +423,5 @@ img {
 }
 
 .logo-footer {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
